@@ -2,7 +2,7 @@
 https://leetcode.com/problems/two-sum/
 '''
 
-# Brute Force
+# 1> Brute Force
 
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
@@ -13,7 +13,7 @@ class Solution:
         return []
 
 
-# Hash Map (Two Pass)
+# 2> Hash Map (Two Pass)
 
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
@@ -31,7 +31,7 @@ class Solution:
         return []
 
 
-# Hash Map (One Pass)
+# 3> Hash Map (One Pass)
 
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
