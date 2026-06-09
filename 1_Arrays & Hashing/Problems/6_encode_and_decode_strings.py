@@ -2,6 +2,13 @@
 https://neetcode.io/problems/string-encode-and-decode/question?list=neetcode150
 '''
 
+from typing import List
+
+'''
+Time complexity: O(m + n) for each encode() and decode() function call.
+Space complexity: O(m + n) for each encode() and decode() function call.
+Where m is the sum of lengths of all the strings and n is the number of strings.
+'''
 class Solution:
 
     def encode(self, strs: List[str]) -> str:

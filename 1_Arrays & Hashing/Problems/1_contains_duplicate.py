@@ -2,6 +2,39 @@
 https://leetcode.com/problems/contains-duplicate/
 '''
 
+from typing import List
+
+# 1> Brute Force
+'''
+Time complexity: O(n^2)
+Space complexity: O(1)
+'''
+class Solution:
+    def hasDuplicate(self, nums: List[int]) -> bool:
+        for i in range(len(nums)):
+            for j in range(i + 1, len(nums)):
+                if nums[i] == nums[j]:
+                    return True
+        return False
+
+# 2> Sorting
+'''
+Time complexity: O(nlogn)
+Space complexity: O(1) or O(n) depending on the sorting algorithm.
+'''
+class Solution:
+    def hasDuplicate(self, nums: List[int]) -> bool:
+        nums.sort()
+        for i in range(1, len(nums)):
+            if nums[i] == nums[i - 1]:
+                return True
+        return False
+    
+# 3> Hash Set
+'''
+Time complexity: O(n)
+Space complexity: O(n)
+'''
 class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
         seen = set()

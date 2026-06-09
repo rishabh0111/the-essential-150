@@ -2,7 +2,15 @@
 https://leetcode.com/problems/product-of-array-except-self/
 '''
 
+from typing import List
+
 # 1> Brute Force
+'''
+Time complexity: O(n²)
+Space complexity:
+O(1) extra space.
+O(n) space for the output array.
+'''
 class Solution:
     def productExceptSelf(self, nums: List[int]) -> List[int]:
         n = len(nums)
@@ -18,6 +26,12 @@ class Solution:
         return res
         
 # 2> Division
+'''
+Time complexity: O(n)
+Space complexity:
+O(1) extra space.
+O(n) space for the output array.
+'''
 class Solution:
     def productExceptSelf(self, nums: List[int]) -> List[int]:
         prod, zero_cnt = 1, 0
@@ -38,6 +52,10 @@ class Solution:
         return res
     
 # 3> Prefix & Suffix
+'''
+Time complexity: O(n)
+Space complexity: O(n)
+'''
 class Solution:
     def productExceptSelf(self, nums: List[int]) -> List[int]:
         n = len(nums)
@@ -57,6 +75,12 @@ class Solution:
         return res
     
 # 4> Prefix & Suffix (optimal)
+'''
+Time complexity: O(n)
+Space complexity:
+O(1) extra space.
+O(n) space for the output array.
+'''
 class Solution:
     def productExceptSelf(self, nums: List[int]) -> List[int]:
         n = len(nums)

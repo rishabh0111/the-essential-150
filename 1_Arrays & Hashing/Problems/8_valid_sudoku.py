@@ -2,7 +2,14 @@
 https://leetcode.com/problems/valid-sudoku
 '''
 
+from typing import List
+from collections import defaultdict
+
 # 1> Brute Force
+'''
+Time complexity: O(n²)
+Space complexity: O(n)
+'''
 class Solution:
     def isValidSudoku(self, board: List[List[str]]) -> bool:
         for row in range(9):
@@ -38,6 +45,12 @@ class Solution:
         return True
 
 # 2> Hash Map (one pass)
+'''
+Time complexity: O(n²)
+Space complexity: O(n²)
+Note: Faster in practice since it validates rows, columns, 
+and boxes simultaneously in a single pass using O(1) hash-set lookups.
+'''
 class Solution:
     def isValidSudoku(self, board: List[List[str]]) -> bool:
         cols = defaultdict(set)

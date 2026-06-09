@@ -2,7 +2,14 @@
 https://leetcode.com/problems/longest-consecutive-sequence
 '''
 
+from typing import List
+from collections import defaultdict
+
 # 1> Brute Force
+'''
+Time complexity: O(n²)
+Space complexity: O(n)
+'''
 class Solution:
     def longestConsecutive(self, nums: List[int]) -> int:
         res = 0
@@ -17,6 +24,10 @@ class Solution:
         return res
     
 # 2> Sorting
+'''
+Time complexity: O(n log n)
+Space complexity: O(1) or O(n), depending on the sorting algorithm.
+'''
 class Solution:
     def longestConsecutive(self, nums: List[int]) -> int:
         if not nums:
@@ -39,6 +50,10 @@ class Solution:
         return res
 
 # 3> Hash Set
+'''
+Time complexity: O(n)
+Space complexity: O(n)
+'''
 class Solution:
     def longestConsecutive(self, nums: List[int]) -> int:
         numSet = set(nums)
@@ -54,6 +69,13 @@ class Solution:
         return longest
     
 # 4> Hash Map
+'''
+Time complexity: O(n)
+Space complexity: O(n)
+Demonstrates an interval-merging technique 
+where each number updates only the sequence boundaries, 
+maintaining O(n) time complexity.
+'''
 class Solution:
     def longestConsecutive(self, nums: List[int]) -> int:
         mp = defaultdict(int)
